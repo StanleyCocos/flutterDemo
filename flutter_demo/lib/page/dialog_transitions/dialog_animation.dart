@@ -29,7 +29,7 @@ Future<T> showAnimationDialog<T>({
     barrierDismissible: barrierDismissible,
     barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
     barrierColor: Colors.black54,
-    transitionDuration: const Duration(milliseconds: 200),
+    transitionDuration: const Duration(milliseconds: 300),
     transitionBuilder: (context, animation1, animation2, child) {
       return _buildDialogTransitions(context, animation1, animation2, child, transitionType);
     },

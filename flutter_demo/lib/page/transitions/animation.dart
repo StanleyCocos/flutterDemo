@@ -8,8 +8,8 @@ class ScaleRouter extends PageRouteBuilder {
 
   ScaleRouter({
     this.page,
-    this.duration = 500,
-    this.curve = Curves.fastOutSlowIn,
+    this.duration = 300,
+    this.curve = Curves.easeOut,
   }) : super(
           pageBuilder: (context, animation, secondaryAnimation) => page,
           transitionDuration: Duration(milliseconds: duration),
@@ -29,7 +29,7 @@ class FadeRouter extends PageRouteBuilder {
 
   FadeRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             pageBuilder: (context, animation, secondaryAnimation) => page,
@@ -51,7 +51,7 @@ class RotateRouter extends PageRouteBuilder {
 
   RotateRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             pageBuilder: (context, animation, secondaryAnimation) => page,
@@ -73,7 +73,7 @@ class Top2BottomRouter extends PageRouteBuilder {
 
   Top2BottomRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             transitionDuration: Duration(milliseconds: duration),
@@ -104,8 +104,8 @@ class Left2RightRouter extends PageRouteBuilder {
 
   Left2RightRouter({
     this.page,
-    this.duration = 500,
-    this.curve = Curves.fastOutSlowIn,
+    this.duration = 300,
+    this.curve = Curves.easeOut,
   })  : assert(true),
         super(
             transitionDuration: Duration(milliseconds: duration),
@@ -135,7 +135,7 @@ class Bottom2TopRouter extends PageRouteBuilder {
 
   Bottom2TopRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             transitionDuration: Duration(milliseconds: duration),
@@ -165,7 +165,7 @@ class Right2LeftRouter extends PageRouteBuilder {
 
   Right2LeftRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             transitionDuration: Duration(milliseconds: duration),
@@ -195,7 +195,7 @@ class ScaleFadeRotateRouter extends PageRouteBuilder {
 
   ScaleFadeRotateRouter({
     this.page,
-    this.duration = 500,
+    this.duration = 300,
     this.curve = Curves.fastOutSlowIn,
   }) : super(
             transitionDuration: Duration(milliseconds: duration),
