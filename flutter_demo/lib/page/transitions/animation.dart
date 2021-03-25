@@ -5,20 +5,22 @@ class ScaleRouter extends PageRouteBuilder {
   final Widget page;
   final int duration;
   final Curve curve;
+  final RouteSettings settings;
 
   ScaleRouter({
     this.page,
     this.duration = 300,
+    this.settings,
     this.curve = Curves.easeOut,
   }) : super(
-          pageBuilder: (context, animation, secondaryAnimation) => page,
-          transitionDuration: Duration(milliseconds: duration),
-          transitionsBuilder: (context, a1, a2, child) => ScaleTransition(
-            scale: Tween(begin: 0.0, end: 1.0)
-                .animate(CurvedAnimation(parent: a1, curve: curve)),
-            child: child,
-          ),
-        );
+            pageBuilder: (context, animation, secondaryAnimation) => page,
+            transitionDuration: Duration(milliseconds: duration),
+            transitionsBuilder: (context, a1, a2, child) => ScaleTransition(
+                  scale: Tween(begin: 0.0, end: 1.0)
+                      .animate(CurvedAnimation(parent: a1, curve: curve)),
+                  child: child,
+                ),
+            settings: settings);
 }
 
 //渐变透明路由动画
