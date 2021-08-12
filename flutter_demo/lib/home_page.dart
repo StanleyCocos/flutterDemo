@@ -1,7 +1,12 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demo/page/dialog_transitions/page.dart';
+import 'package:flutter_demo/page/list_hero/hero_list.dart';
+import 'package:flutter_demo/page/sliver/sliver_page.dart';
 import 'package:flutter_demo/page/transitions/from_page.dart';
+
+import 'page/text_height.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,7 +18,7 @@ class _HomeState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    List<String> dataList = ["页面转场动画", "Dialog弹出动画",];
+    List<String> dataList = ["页面转场动画", "Dialog弹出动画", "Sliver+TabView", "ListHero"];
     return Scaffold(
       appBar: AppBar(
         title: Text("首页"),
@@ -67,14 +72,16 @@ extension Click on _HomeState {
   void listItemOnClick(int index){
     switch(index){
       case 0:
-        Navigator.push(context, MaterialPageRoute(builder: (context) => TransitionsFromPage()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => TextHeight()));
         break;
       case 1:
         Navigator.push(context, MaterialPageRoute(builder: (context) => DialogAnimationPage()));
         break;
       case 2:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SliverPage()));
         break;
       case 3:
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HeroListPage()));
         break;
     }
   }
